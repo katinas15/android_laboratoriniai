@@ -42,21 +42,35 @@ public class MainActivity extends AppCompatActivity {
         penktas = (EditText) findViewById(R.id.penktas);
         sestas = (Switch) findViewById(R.id.sestas);
 
-// Create an ArrayAdapter using the string array and a default spinner layout
-        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+
+        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,
+                android.R.layout.simple_dropdown_item_1line, COUNTRIES);
+        antras.setAdapter(adapter);
+
+
+        ArrayAdapter<CharSequence> adapterSpinner = ArrayAdapter.createFromResource(this,
                 R.array.dienos, android.R.layout.simple_spinner_item);
-// Specify the layout to use when the list of choices appears
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-// Apply the adapter to the spinner
-        ketvirtas.setAdapter(adapter);
+        ketvirtas.setAdapter(adapterSpinner);
     }
 
+    private static final String[] COUNTRIES = new String[] {
+            "Architektūros fakultetas",
+            "Fundamentinių mokslų fakultetas",
+            "Mechanikos fakultetas",
+            "Transporto inžinerijos fakultetas",
+            "Aplinkos inžinerijos fakultetas",
+            "Elektronikos fakultetas",
+            "Kūrybinių industrijų fakultetas",
+            "Statybos fakultetas",
+            "Verslo vadybos fakultetas"
+    };
 
     public void toastas(View v){
         String tekstas = "";
         tekstas += pirmas.getText().toString() + '\n';
         tekstas += antras.getText().toString() + '\n';
-        tekstas += trecias.getRating();
+        tekstas += String.valueOf(trecias.getRating()) + '\n';
         tekstas += ketvirtas.getSelectedItem().toString() + '\n';
         tekstas += penktas.getText().toString() + '\n';
         tekstas += sestas.isChecked();

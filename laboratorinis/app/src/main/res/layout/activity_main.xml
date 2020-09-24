@@ -42,7 +42,10 @@
                 android:id="@+id/antras"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:dropDownHeight="match_parent"
+                android:autoText="true"
+                android:completionThreshold="0"
+                android:dropDownAnchor="@id/antras"
+                android:dropDownHeight="400px"
                 android:dropDownSelector="@android:drawable/arrow_down_float"
                 android:hint="Fakultetas" />
 
