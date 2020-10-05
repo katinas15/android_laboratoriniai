@@ -27,24 +27,11 @@ public class MainActivity extends AppCompatActivity {
 
         puslapis.getSettings().setJavaScriptEnabled(true);
         puslapis.setWebViewClient(new WebViewClient());
-//        puslapis.setWebChromeClient(new WebChromeClient() {
-//            @Override
-//            public boolean onCreateWindow(WebView view, boolean dialog, boolean userGesture, android.os.Message resultMsg)
-//            {
-//                WebView.HitTestResult result = view.getHitTestResult();
-//                String data = result.getExtra();
-//                Context context = view.getContext();
-//                Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(data));
-//                context.startActivity(browserIntent);
-//                return false;
-//            }
-//        });
-//        puslapis.loadUrl("https://www.google.com");
+
     }
 
     public void changeWeb(View v){
 
-//        puslapis = (WebView) findViewById(R.id.webview);
         puslapis.loadUrl(link.getText().toString());
     }
 }

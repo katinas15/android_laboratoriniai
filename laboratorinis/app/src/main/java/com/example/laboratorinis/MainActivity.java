@@ -44,8 +44,9 @@ public class MainActivity extends AppCompatActivity {
 
 
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,
-                android.R.layout.simple_dropdown_item_1line, COUNTRIES);
+                android.R.layout.simple_dropdown_item_1line, FAKULTETAI);
         antras.setAdapter(adapter);
+
 
 
         ArrayAdapter<CharSequence> adapterSpinner = ArrayAdapter.createFromResource(this,
@@ -54,7 +55,7 @@ public class MainActivity extends AppCompatActivity {
         ketvirtas.setAdapter(adapterSpinner);
     }
 
-    private static final String[] COUNTRIES = new String[] {
+    private static final String[] FAKULTETAI = new String[] {
             "Architektūros fakultetas",
             "Fundamentinių mokslų fakultetas",
             "Mechanikos fakultetas",
