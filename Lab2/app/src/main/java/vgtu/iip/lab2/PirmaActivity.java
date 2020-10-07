@@ -16,8 +16,8 @@ public class PirmaActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activitma);
-        isvedimoLaukas = (TextView) finy_pirdViewById(R.id.tekstas);
+        setContentView(R.layout.activity_pirma);
+        isvedimoLaukas = (TextView) findViewById(R.id.tekstas);
     }
 
     public void atvertiVeiklaRezultatuGavimui(View w){
@@ -30,12 +30,24 @@ public class PirmaActivity extends AppCompatActivity {
 
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
 //        Log.i("TODO", "Grizo is AntraActivity");
-        String result=data.getStringExtra("ivestis");
-        Log.i("Veiksmas", "Grazinami duomenys; Kodas -  " + resultCode + " ;Duomenys - " + result);
+        if(requestCode == 1){
+            if(resultCode == RESULT_OK){
+                Log.i("check", "OK");
+                String result=data.getStringExtra("ivestis");
+                Log.i("INTENT", String.valueOf(requestCode)); //patikriname nuo kokio intent
+                Log.i("Veiksmas", data.toString());
+                Log.i("Veiksmas", "Grazinami duomenys; Kodas -  " + resultCode + " ;Duomenys - " + result);
+                isvedimoLaukas.setText(result);
+            } else if(resultCode == RESULT_CANCELED){
+                Log.i("check", "NOT OK");
+            }
+        }
+
+
 
         //TODO patikrinti nuo kokios veiklos ir kokius rezultatus gavo, tada pasiimti siunciama reiksme ir ja paduoti vietoj sekancioje eiluteje irasyto teksto
 
-        isvedimoLaukas.setText(result);
+
     }
 
     public void sukurtiExplicitIntent(View w){
@@ -44,6 +56,7 @@ public class PirmaActivity extends AppCompatActivity {
         Log.i("Veiksmas", "Skaiciuojami zodziai i kuriamas explicit intent");
         //TODO sukurti explicit intent, su putExtra perduoti tekstas kintamaji ir tada paleisti, nelaukiant rezultatu
         Intent TreciasLangas = new Intent(PirmaActivity.this, TreciaActivity.class);
+        TreciasLangas.setAction(Intent.ACTION_SEND);
         TreciasLangas.putExtra("ivestis", tekstas);
 
         startActivity(TreciasLangas);
