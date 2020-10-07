@@ -42,12 +42,7 @@ public class PirmaActivity extends AppCompatActivity {
                 Log.i("check", "NOT OK");
             }
         }
-
-
-
         //TODO patikrinti nuo kokios veiklos ir kokius rezultatus gavo, tada pasiimti siunciama reiksme ir ja paduoti vietoj sekancioje eiluteje irasyto teksto
-
-
     }
 
     public void sukurtiExplicitIntent(View w){

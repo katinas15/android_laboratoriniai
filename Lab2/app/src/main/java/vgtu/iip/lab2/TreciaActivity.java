@@ -6,6 +6,8 @@ import android.os.Bundle;
 import android.util.Log;
 import android.widget.TextView;
 
+import static android.content.Intent.ACTION_SEND;
+
 public class TreciaActivity extends AppCompatActivity {
 
     @Override
@@ -20,6 +22,11 @@ public class TreciaActivity extends AppCompatActivity {
 
         String tekstas = (String) dabar.getSerializableExtra("ivestis");
         //TODO reiketu patikrinti ar veiksmas buvo ACTION_SEND ar ne, ir pasiimti siunciamus duomenis, kaip kintamaji tekstas
+        if(this.getIntent().getAction() == ACTION_SEND){
+            Log.i("a", "action send");
+        } else {
+            Log.i("a", "not send");
+        }
         int kiekis = tekstas.split(" ").length;
         String isvestis = getString(R.string.ivestasTestas)+" '"+tekstas+"' "+getString(R.string.yra)
                 +" "+kiekis+" "+getString(R.string.zodziu);
