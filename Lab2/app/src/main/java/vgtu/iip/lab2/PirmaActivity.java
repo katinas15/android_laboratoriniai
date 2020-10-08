@@ -32,11 +32,11 @@ public class PirmaActivity extends AppCompatActivity {
 //        Log.i("TODO", "Grizo is AntraActivity");
         if(requestCode == 1){
             if(resultCode == RESULT_OK){
-                Log.i("check", "OK");
+//                Log.i("check", "OK");
                 String result=data.getStringExtra("ivestis");
-                Log.i("INTENT", String.valueOf(requestCode)); //patikriname nuo kokio intent
-                Log.i("Veiksmas", data.toString());
-                Log.i("Veiksmas", "Grazinami duomenys; Kodas -  " + resultCode + " ;Duomenys - " + result);
+//                Log.i("INTENT", String.valueOf(requestCode)); //patikriname nuo kokio intent
+//                Log.i("Veiksmas", data.toString());
+//                Log.i("Veiksmas", "Grazinami duomenys; Kodas -  " + resultCode + " ;Duomenys - " + result);
                 isvedimoLaukas.setText(result);
             } else if(resultCode == RESULT_CANCELED){
                 Log.i("check", "NOT OK");

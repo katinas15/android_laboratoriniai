@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="dienos">
+        <item>Pirmadienis</item>
+        <item>Antradienis</item>
+        <item>Treciadienis</item>
+        <item>Ketvirtadienis</item>
+        <item>Penktadienis</item>
+        <item>Sestadienis</item>
+        <item>Sekmadienis</item>
+    </string-array>
+</resources>

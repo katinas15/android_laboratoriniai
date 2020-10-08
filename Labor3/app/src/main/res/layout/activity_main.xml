@@ -40,8 +40,8 @@
 
             <AutoCompleteTextView
                 android:id="@+id/antras"
-                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:completionThreshold="1"
                 android:hint="Fakultetas" />
 
             <TextView
@@ -54,8 +54,8 @@
         </TableRow>
 
         <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent" >
+            android:layout_width="400px"
+            android:layout_height="match_parent">
 
             <RatingBar
                 android:id="@+id/trecias"
@@ -141,6 +141,7 @@
                 android:id="@+id/button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:onClick="toastas"
                 android:text="Saugoti Duomenis" />
         </TableRow>
     </TableLayout>
