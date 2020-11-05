@@ -1,2 +1,0 @@
-# programavimo tech
- 
