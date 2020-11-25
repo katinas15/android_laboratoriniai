@@ -25,10 +25,6 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         mainActivity = this;
         Receiveris.mainActivity = this;
-
-        IntentFilter filtras = new IntentFilter();
-        filtras.addAction("2_Programos_nesist_isreikst_trans");
-        registerReceiver(new Receiveris(), filtras);
     }
 
     public void broadcast(View v){

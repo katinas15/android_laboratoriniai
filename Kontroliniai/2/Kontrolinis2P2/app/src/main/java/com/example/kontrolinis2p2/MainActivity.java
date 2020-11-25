@@ -28,7 +28,6 @@ public class MainActivity extends AppCompatActivity {
         textView = findViewById(R.id.textView);
 
         IntentFilter filtras = new IntentFilter(broadcastName);
-        filtras.addAction("Mano_nesisteminis_Intentas");
         registerReceiver(new Transl_Imtuvas_1(), filtras);
     }
 
@@ -52,10 +51,18 @@ public class MainActivity extends AppCompatActivity {
 
     private void broadcastIntent() {
         Log.i("a", "gautas panesimas, siunciama atgal");
-        Intent intent = new Intent("com.example.kontrolinis2p1");
+        Intent intent = new Intent();
         intent.setAction("2_Programos_nesist_isreikst_trans");
         intent.putExtra("Message", "Broadcast gautas, kurio pavadinimas yra - " + broadcastName);
-        intent.setClassName("com.example.kontrolinis2p1","com.example.kontrolinis2p1.Receiveris");
-        sendBroadcast(intent);
+        PackageManager packageManager = getPackageManager();
+        List<ResolveInfo> infos = packageManager.queryBroadcastReceivers(intent, 0);
+        for (ResolveInfo info : infos) {
+            ComponentName cn = new ComponentName(info.activityInfo.packageName,
+                    info.activityInfo.name);
+            intent.setComponent(cn);
+            sendBroadcast(intent);
+        }
+
     }
+
 }
