@@ -50,18 +50,27 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void broadcastIntent() {
-        Log.i("a", "gautas panesimas, siunciama atgal");
-        Intent intent = new Intent();
-        intent.setAction("2_Programos_nesist_isreikst_trans");
-        intent.putExtra("Message", "Broadcast gautas, kurio pavadinimas yra - " + broadcastName);
-        PackageManager packageManager = getPackageManager();
-        List<ResolveInfo> infos = packageManager.queryBroadcastReceivers(intent, 0);
-        for (ResolveInfo info : infos) {
-            ComponentName cn = new ComponentName(info.activityInfo.packageName,
-                    info.activityInfo.name);
-            intent.setComponent(cn);
-            sendBroadcast(intent);
-        }
+//        Log.i("a", "gautas panesimas, siunciama atgal");
+//        Intent intent = new Intent();
+//        intent.setAction("2_Programos_nesist_isreikst_trans");
+//        intent.putExtra("Message", "Broadcast gautas, kurio pavadinimas yra - " + broadcastName);
+//        PackageManager packageManager = getPackageManager();
+//        List<ResolveInfo> infos = packageManager.queryBroadcastReceivers(intent, 0);
+//        for (ResolveInfo info : infos) {
+//            ComponentName cn = new ComponentName(info.activityInfo.packageName,
+//                    info.activityInfo.name);
+//            intent.setComponent(cn);
+//            sendBroadcast(intent);
+//            Log.i("a","siunciama");
+//        }
+
+
+        Intent intent = new Intent("2_Programos_nesist_isreikst_trans");
+        ComponentName cn1 = new ComponentName(senderLocation,
+                senderLocation+replyTo);
+        intent.setComponent(cn1);
+        MainActivity.getInstance().sendBroadcast(intent);
+
 
     }
 
