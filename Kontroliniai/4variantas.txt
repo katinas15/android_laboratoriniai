@@ -1,0 +1,12 @@
+4 variantas
+
+1. sukurti programa, kurios pagrindiniame lange butu 2 fragmentai. Viename isdelioti mygtukai, o kitame WebView objektas.
+
+2. Taip pat reikia sukurti meniu. Tas meniu iskviecia pirmo fragmento skirtingus variantus. (pvz. fragmentas su mygtukais, o kiekvienas mygtukas siustu uzklausa WebView objektui antrame fragmente su skirtingais URL)
+
+
+
+2 variantas
+
+sukurti programa kuri siuncia HTTP MD5 uzklausa i JSON test ir gauto MD5 raktazodzio eilute lyginama su seniau programoje issaugotu MD5 raktazodzio eilute.
+Jei eilutes skiriasi sukurta programa turi transliuoti informacini pranesima (notification), kad duomenys pasene ir juos reikia atnaujinti. Tada programa turi issaugoti naujau gauta MD5 (naudoti shared preferences). Taip pat jei MD5 skiriasi turi atsirasti mygtukas pasiulantis atnaujinti duomenis
