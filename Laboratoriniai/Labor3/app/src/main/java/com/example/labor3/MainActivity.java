@@ -37,7 +37,10 @@ public class MainActivity extends AppCompatActivity {
         penktas = (EditText) findViewById(R.id.penktas);
         sestas = (Switch) findViewById(R.id.sestas);
 
-        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_dropdown_item_1line, fakultetai);
+        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,
+                android.R.layout.simple_dropdown_item_1line,
+                fakultetai);
+
         antras.setAdapter(adapter);
 
         ArrayAdapter<CharSequence> adapterSp = ArrayAdapter.createFromResource(this,

@@ -79,8 +79,6 @@ public class MainActivity extends AppCompatActivity {
             default:
                 return super.onContextItemSelected(item);
         }
-
-
     }
 
     @Override
