@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/Tieses"
+        android:title="TiesesFunkcijos" />
+    <item
+        android:id="@+id/Polinomai"
+        android:title="Polinomai" />
+    <item
+        android:id="@+id/Trigonometrija"
+        android:title="Trigonometrija" />
+    <item
+        android:id="@+id/Hiperboles"
+        android:title="Hiperboles" />
+    <item
+        android:id="@+id/Laipsnine"
+        android:title="Laipsnine" />
+    <item
+        android:id="@+id/Logaritmine"
+        android:title="Logaritmine" />
+</menu>
